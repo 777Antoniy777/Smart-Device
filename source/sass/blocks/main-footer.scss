@@ -1,0 +1,21 @@
+.main-footer {
+  min-height: 317px;
+  background-color: $white;
+}
+
+.main-footer__logo-wrapper .mobile-logo {
+  &--first {
+    fill: #203C42;
+  }
+
+  &--second {
+    fill: #788891;
+  }
+}
+
+.main-footer__nav-wrapper > h3 {
+  @include font(15, 18);
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

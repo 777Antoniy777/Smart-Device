@@ -1,0 +1,36 @@
+body {
+  @include font($font-size-desk, $line-height-desk);
+  font-family: $ptmono;
+  color: $feature-color;
+  background-color: $bg-primary;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+}
+
+.site-wrapper {
+  max-width: 1410px;
+  width: 100%;
+  margin: 0 auto;
+}
+
