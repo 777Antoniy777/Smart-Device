@@ -1,0 +1,27 @@
+@mixin flex($flex-direction: row, $align-items: stretch) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+}
+
+@mixin font($font-size, $line-height, $font-weight: $regular, $font-style: normal) {
+  font-size: $font-size + px;
+  line-height: $line-height + px;
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+@mixin link($underline: none, $link-color: white) {
+  text-decoration: $underline;
+  color: $link-color;
+}
+
+@mixin background($position: 0 0, $repeat: no-repeat) {
+  background-position: $position;
+  background-repeat: $repeat;
+}
+
+@mixin pseudo($content: "", $position: absolute) {
+  content: $content;
+  position: $position;
+}
