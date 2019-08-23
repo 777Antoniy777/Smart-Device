@@ -1,0 +1,62 @@
+.adress {
+  width: calc(333 * 100% / 993);
+
+  @media (max-width: $tablet-width) {
+    width: 345px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding: 27px 15px 27px 15px;
+    border-bottom: 1px solid rgba(#626962, 0.2);
+  }
+}
+
+.adress__wrapper {
+  padding-bottom: 24px;
+
+  @media (max-width: $mobile-width) {
+    @include flex(row, center);
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+}
+
+.adress__wrapper > h3 {
+  @include font(15, 18);
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.adress__wrapper > button {
+  position: relative;
+  display: none;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.adress__item,
+.adress__item > a {
+  @include font(15, 25);
+}
+
+.adress__item {
+  color: $footer-color;
+}
+
+.adress__item > a {
+  @include link(none, $footer-color);
+}
+
+.adress__list {
+  @media (max-width: $mobile-width) {
+    width: 70%;
+  }
+}
