@@ -1,5 +1,6 @@
 body {
   @include font($font-size-desk, $line-height-desk);
+  min-width: 320px;
   font-family: $ptmono;
   color: $feature-color;
   background-color: $bg-primary;
