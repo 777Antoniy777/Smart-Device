@@ -1,0 +1,190 @@
+.introduction {
+  min-height: 878px;
+  padding: 258px 20px 100px;
+  color: $white;
+  background-image: url("../img/background-chip@1x.png");
+  background-size: cover;
+  background-color: $introduction-bg;
+  overflow: hidden;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/background-chip@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 685px;
+    padding-top: 113px;
+    padding-bottom: 160px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 530px;
+    padding: 92px 0 44px;
+  }
+}
+
+.introduction .site-wrapper {
+  @include flex(row, flex-start);
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1566px;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column-reverse;
+  }
+}
+
+.introduction__wrapper {
+  position: relative;
+  width: 790px;
+  min-height: 515px;
+  margin-right: 71px;
+  padding-top: 57px;
+  padding-left: 72px;
+
+  @media (max-width: $tablet-width) {
+    width: 454px;
+    min-height: 410px;
+    margin-right: 36px;
+    padding-top: 75px;
+    padding-left: 68px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: -26px;
+    width: 100%;
+    min-height: 200px;
+    margin-right: 0;
+    padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.introduction__wrapper > h2,
+.introduction__wrapper > a {
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+}
+
+.introduction__wrapper > h2 {
+  @include font(80, 94, $bold);
+  position: relative;
+  padding-bottom: 28px;
+  letter-spacing: 0.07em;
+
+  @media (max-width: $tablet-width) {
+    @include font(60, 70, $bold);
+    padding-bottom: 33px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font(40, 47, $bold);
+    z-index: 1;
+    padding-bottom: 27px;
+  }
+}
+
+.introduction__wrapper > a {
+  @include font($font-size-desk, 19, $bold);
+  @include link;
+  @include flex(row, center);
+  justify-content: center;
+  width: 407px;
+  min-height: 55px;
+  margin-left: 98px;
+  background-color: $feature-bg;
+  border-radius: 5px;
+  letter-spacing: 0.05em;
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+    left: 44px;
+    width: 379px;
+    margin-left: 7px;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.introduction__wrapper > a span {
+  &:nth-child(2) {
+    display: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    &:nth-child(1) {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      display: block;
+    }
+  }
+}
+
+.introduction__wrapper > p {
+  @include font(22, 34);
+  position: relative;
+  padding-left: 98px;
+  padding-bottom: 43px;
+
+  &::before {
+    @include pseudo;
+    top: 16px;
+    left: 4px;
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+  }
+
+  @media (max-width: $tablet-width) {
+    @include font(18, 25);
+    padding-left: 51px;
+    padding-bottom: 57px;
+
+    &::before {
+      top: 12px;
+      left: 3px;
+      width: 33px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font($font-size-desk, 24);
+    padding-bottom: 43px;
+
+    &::before {
+      top: 14px;
+    }
+  }
+}
+
+.introduction .site-wrapper > img {
+  position: relative;
+  width: 705px;
+  height: 515px;
+  object-fit: contain;
+
+  @media (max-width: $tablet-width) {
+    width: 465px;
+    height: 340px;
+  }
+
+  @media (max-width: $mobile-width) {
+    right: -7px;
+    align-self: flex-end;
+    width: 301px;
+    height: 220px;
+  }
+}
