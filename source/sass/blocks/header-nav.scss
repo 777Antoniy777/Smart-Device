@@ -18,6 +18,21 @@
 .header-nav .site-wrapper {
   @include flex(row, center);
   min-height: inherit;
+
+  // for IE
+  /* stylelint-disable */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 33px;
+  }
+
+  @media (max-width: $tablet-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 0;
+  }
+  /* stylelint-enable */
 }
 
 .header-nav__logo-wrapper {
@@ -84,10 +99,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    .header-nav button {
-      margin-right: 27px;
-      margin-bottom: 5px;
-    }
+    margin-right: 27px;
+    margin-bottom: 5px;
   }
 }
 
@@ -190,6 +203,7 @@
   @include font(14, 16, $bold);
   @include link;
   @include flex(row, center);
+  position: relative;
   justify-content: center;
   width: 180px;
   min-height: 45px;
@@ -202,8 +216,14 @@
   border-radius: 5px;
   letter-spacing: 0.05em;
 
+  // for IE
+  /* stylelint-disable */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 14px;
+  }
+  /* stylelint-enable */
+
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
-

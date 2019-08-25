@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
+    <meta name="Description" content="Electronics store">
     <link href="css/style.min.css" rel="stylesheet">
     <link href="/fonts/PTMono-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
     <link href="/fonts/RobotoCondensed-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
@@ -43,7 +44,7 @@
             </a>
           </div>
 
-          <div class="header-nav__wrapper">
+          <div class="header-nav__wrapper title">
 
             <button type="button" aria-label="Меню сайта"></button>
 
@@ -90,7 +91,8 @@
             </a>
           </div>
 
-          <img src="img/chip@1x.png" data-object-fit="contain" alt="Микросхема"
+          <!-- 1х: 705px; 2x: 1410px -->
+          <img src="img/chip@1x.png"
                srcset="img/chip@1x.png 1x, img/chip@2x.png 2x"
                alt="Микросхема">
 
@@ -102,7 +104,7 @@
           <div class="site-wrapper">
             <h2 class="visually-hidden">Наши особенности</h2>
 
-            <ul class="features__list">
+            <ul class="features__list title">
               <li class="features__item">
                 <h3>Оперативные сроки</h3>
                 <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
@@ -277,7 +279,10 @@
     <div style="display: none;">
       <include src="build/img/sprite_auto.svg"></include>
     </div>
-    <script src="js/objectfit-polifill.js"></script>
-    <script src='js/all.min.js'></script>
+
+    <script src="js/objectFit.min.js"></script>
+    <script>
+      objectFitImages();
+    </script>
   </body>
 </html>

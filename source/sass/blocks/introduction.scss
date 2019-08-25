@@ -13,13 +13,13 @@
 
   @media (max-width: $tablet-width) {
     min-height: 685px;
-    padding-top: 113px;
-    padding-bottom: 160px;
+    padding-top: 81px;
+    padding-bottom: 163px;
   }
 
   @media (max-width: $mobile-width) {
     min-height: 530px;
-    padding: 92px 0 44px;
+    padding: 67px 0 44px;
   }
 }
 
@@ -29,14 +29,31 @@
   flex-wrap: wrap;
   max-width: 1566px;
   width: 100%;
+  background-image: url("../img/triangles.svg");
+  background-size: 670px 641px;
+  background-position: 95.3% 110.4%;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1605px) {
+    background-position: 46.3% 95.4%;
+  }
 
   @media (max-width: $tablet-width) {
     justify-content: flex-start;
     flex-wrap: nowrap;
+    width: 983px;
+    padding-top: 32px;
+    background-size: 528px 505px;
+    background-position: 92.3% 192.4%;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column-reverse;
+    width: auto;
+    padding-top: 25px;
+    background-size: 523px 483px;
+    // background-size: 100% 483px;
+    background-position: 143px -113px;
   }
 }
 
@@ -102,6 +119,13 @@
   background-color: $feature-bg;
   border-radius: 5px;
   letter-spacing: 0.05em;
+
+  // for IE
+  /* stylelint-disable */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 19px;
+  }
+  /* stylelint-enable */
 
   @media (max-width: $tablet-width) {
     position: relative;
