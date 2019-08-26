@@ -1,0 +1,174 @@
+.features {
+  padding: 111px 20px 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 54px 25px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 37px 15px 0;
+  }
+}
+
+.features .site-wrapper {
+  max-width: 1170px;
+  width: 100%;
+}
+
+.features__list {
+  @include flex(row center);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.features__item {
+  position: relative;
+  max-width: 570px;
+  width: calc(570 * 100% / 1170);
+  min-height: 299px;
+  margin-right: calc(30 * 100% / 1170);
+  margin-bottom: 30px;
+  padding: 96px 41px 26px 43px;
+  background-color: $white;
+  border: 1px solid #ebebeb;
+  border-left: 2px solid $feature-bg;
+  cursor: pointer;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &::before {
+    @include pseudo;
+    top: 40px;
+    left: 43px;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(1) {
+    &::before {
+      width: 29px;
+      height: 35px;
+      background-image: url("../img/watch-blue.svg");
+      background-size: 29px 35px;
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      width: 35px;
+      height: 35px;
+      background-image: url("../img/suppliers-blue.svg");
+      background-size: 35px 35px;
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      width: 36px;
+      height: 31px;
+      background-image: url("../img/detective-blue.svg");
+      background-size: 36px 31px;
+    }
+  }
+
+  &:nth-child(4) {
+    &::before {
+      width: 35px;
+      height: 35px;
+      background-image: url("../img/price-blue.svg");
+      background-size: 35px 35px;
+    }
+  }
+
+  // &:hover
+  &:hover {
+    background-color: $feature-bg;
+    border-color: $feature-bg;
+  }
+
+  &:nth-child(1):hover {
+    &::before {
+      background-image: url("../img/watch-white.svg");
+    }
+  }
+
+  &:nth-child(2):hover {
+    &::before {
+      background-image: url("../img/suppliers-white.svg");
+    }
+  }
+
+  &:nth-child(3):hover {
+    &::before {
+      background-image: url("../img/detective-white.svg");
+    }
+  }
+
+  &:nth-child(4):hover {
+    &::before {
+      background-image: url("../img/price-white.svg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: calc(561 * 100% / 1170);
+    min-height: 306px;
+    margin-right: calc(48 * 100% / 1170);
+    padding: 66px 21px 14px 25px;
+
+    &::before {
+      top: 24px;
+      left: 25px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+    width: 100%;
+    min-height: 232px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 74px 13px 23px 25px;
+
+    &:nth-child(2) {
+      padding-right: 12px;
+    }
+
+    &::before {
+      top: 24px;
+      left: 25px;
+    }
+  }
+}
+
+.features__item > h3 {
+  @include font(24, 34);
+  padding-bottom: 14px;
+  font-family: $roboto-condensed;
+  color: $feature-bg;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 9px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font(20, 22);
+    padding-bottom: 13px;
+  }
+}
+
+.features__item > p {
+  @include font($font-size-desk, $line-height-desk);
+  color: $feature-color;
+}
+
+// &:hover
+.features__item:hover > h3,
+.features__item:hover > p {
+  color: $white;
+}

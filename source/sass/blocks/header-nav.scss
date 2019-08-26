@@ -1,17 +1,15 @@
 .header-nav {
-  min-height: 120px;
+  min-height: inherit;
   padding-left: 17px;
   padding-right: 20px;
   color: $white;
 
   @media (max-width: $tablet-width) {
-    min-height: 94px;
     padding-left: 27px;
     padding-right: 24px;
   }
 
   @media (max-width: $mobile-width) {
-    min-height: 72px;
     padding-left: 10px;
     padding-right: 15px;
   }
@@ -20,6 +18,21 @@
 .header-nav .site-wrapper {
   @include flex(row, center);
   min-height: inherit;
+
+  // for IE
+  /* stylelint-disable */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 33px;
+  }
+
+  @media (max-width: $tablet-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 0;
+  }
+  /* stylelint-enable */
 }
 
 .header-nav__logo-wrapper {
@@ -86,10 +99,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    .header-nav button {
-      margin-right: 28px;
-      margin-bottom: 6px;
-    }
+    margin-right: 27px;
+    margin-bottom: 5px;
   }
 }
 
@@ -191,10 +202,13 @@
 .header-nav__wrapper > a {
   @include font(14, 16, $bold);
   @include link;
+  @include flex(row, center);
+  position: relative;
+  justify-content: center;
   width: 180px;
   min-height: 45px;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   font-family: $roboto-condensed;
   text-align: center;
   text-transform: uppercase;
@@ -202,8 +216,14 @@
   border-radius: 5px;
   letter-spacing: 0.05em;
 
+  // for IE
+  /* stylelint-disable */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 14px;
+  }
+  /* stylelint-enable */
+
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
-

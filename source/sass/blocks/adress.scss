@@ -18,7 +18,7 @@
   @media (max-width: $mobile-width) {
     @include flex(row, center);
     justify-content: space-between;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 }
 
@@ -42,6 +42,13 @@
   }
 }
 
+.adress__list {
+  @media (max-width: $mobile-width) {
+    width: 70%;
+    margin-top: 30px;
+  }
+}
+
 .adress__item,
 .adress__item > a {
   @include font(15, 25);
@@ -53,10 +60,4 @@
 
 .adress__item > a {
   @include link(none, $footer-color);
-}
-
-.adress__list {
-  @media (max-width: $mobile-width) {
-    width: 70%;
-  }
 }
