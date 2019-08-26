@@ -1,0 +1,48 @@
+.feedback {
+  color: $white;
+  background-color: $feature-bg;
+}
+
+.feedback p {
+  &:nth-of-type(1) {
+    @include font(36, 51);
+    font-family: $roboto-condensed;
+  }
+
+  &:nth-of-type(2) {
+    @include font($font-size-desk, $line-height-desk);
+  }
+}
+
+.feedback form > input,
+.feedback form > textarea {
+  @include font($font-size-desk, $line-height-desk);
+  color: $white;
+  background-color: rgba($white, 0.1);
+  border: none;
+
+  &::placeholder {
+    @include font($font-size-desk, $line-height-desk);
+    color: $white;
+  }
+}
+
+.feedback form > input {
+  @include flex(row, center);
+}
+
+.feedback form div > button {
+  @include font(14, 16, $bold);
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+}
+
+.feedback form div > label {
+  @include font(14, 16);
+  color: rgba($white, 0.8);
+}
