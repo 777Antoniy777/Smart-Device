@@ -30,12 +30,15 @@
   max-width: 570px;
   width: calc(570 * 100% / 1170);
   min-height: 299px;
-  margin-right: calc(30 * 100% / 1170);
+  margin-right: calc(29 * 100% / 1170);
   margin-bottom: 30px;
   padding: 96px 41px 26px 43px;
   background-color: $white;
   border: 1px solid #ebebeb;
   border-left: 2px solid $feature-bg;
+  transition: background-color 0.3s,
+              border-color 0.3s,
+              transform 0.3s;
   cursor: pointer;
 
   &:nth-child(2n) {
@@ -47,6 +50,7 @@
     top: 40px;
     left: 43px;
     background-repeat: no-repeat;
+    transition: background-image 0.3s;
   }
 
   &:nth-child(1) {
@@ -89,6 +93,7 @@
   &:hover {
     background-color: $feature-bg;
     border-color: $feature-bg;
+    transform: translateY(-5px);
   }
 
   &:nth-child(1):hover {
@@ -117,9 +122,9 @@
 
   @media (max-width: $tablet-width) {
     width: calc(561 * 100% / 1170);
-    min-height: 306px;
-    margin-right: calc(48 * 100% / 1170);
-    padding: 66px 21px 14px 25px;
+    min-height: 233px;
+    margin-right: calc(47 * 100% / 1170);
+    padding: 66px 21px 19px 25px;
 
     &::before {
       top: 24px;
@@ -171,4 +176,5 @@
 .features__item:hover > h3,
 .features__item:hover > p {
   color: $white;
+  transition: 0.3s;
 }
