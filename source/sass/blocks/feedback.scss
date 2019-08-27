@@ -1,22 +1,54 @@
 .feedback {
+  @include background(100% 63%);
+  padding: 92px 20px 114px;
   color: $white;
+  background-image: url("../img/triangle-feedback-bg.svg");
+  background-size: 1744px 114%;
   background-color: $feature-bg;
+}
+
+.feedback .site-wrapper {
+  @include flex(column, flex-end);
+  max-width: 1170px;
+  width: 100%;
 }
 
 .feedback p {
   &:nth-of-type(1) {
     @include font(36, 51);
+    max-width: 575px;
+    width: 100%;
+    padding-bottom: 9px;
     font-family: $roboto-condensed;
   }
 
   &:nth-of-type(2) {
     @include font($font-size-desk, $line-height-desk);
+    max-width: 570px;
+    width: 100%;
+    padding-bottom: 51px;
   }
 }
 
-.feedback form > input,
+.feedback form {
+  @include flex(column);
+  width: 570px;
+}
+
+.feedback form div {
+  @include flex(row, center);
+  justify-content: space-between;
+
+  &:nth-of-type(1) {
+    flex-wrap: wrap;
+    margin-bottom: 41px;
+  }
+}
+
+.feedback form div:nth-of-type(1) > input,
 .feedback form > textarea {
   @include font($font-size-desk, $line-height-desk);
+  padding-left: 16px;
   color: $white;
   background-color: rgba($white, 0.1);
   border: none;
@@ -24,16 +56,39 @@
   &::placeholder {
     @include font($font-size-desk, $line-height-desk);
     color: $white;
+    opacity: 1;
   }
 }
 
-.feedback form > input {
+.feedback form div:nth-of-type(1) > input {
   @include flex(row, center);
+  width: 270px;
+  height: 50px;
+  padding-bottom: 5px;
 }
 
-.feedback form div > button {
+// for FF
+/* stylelint-disable */
+_::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) > input {
+  padding-top: 13px;
+  padding-bottom: 15px;
+}
+/* stylelint-enable */
+
+.feedback form > textarea {
+  width: 570px;
+  height: 154px;
+  margin-bottom: 42px;
+  padding: 10px 20px 10px 16px;
+  resize: none;
+}
+
+.feedback form div:nth-of-type(2) > button {
   @include font(14, 16, $bold);
   font-family: $roboto-condensed;
+  width: 270px;
+  min-height: 45px;
+  margin-right: 38px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $white;
@@ -42,7 +97,47 @@
   border-radius: 5px;
 }
 
-.feedback form div > label {
+.feedback form div:nth-of-type(2) > input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.feedback form div:nth-of-type(2) > label {
   @include font(14, 16);
+  position: relative;
+  width: 230px;
   color: rgba($white, 0.8);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    @include pseudo;
+  }
+
+  &::before {
+    top: 2px;
+    left: -32px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+  }
+
+  &::after {
+    display: none;
+    top: 4px;
+    left: -28px;
+    width: 9px;
+    height: 7px;
+    border: 1px solid $white;
+    clip: rect(2px, auto, auto, 2px);
+    transform: scale(-1, 1) rotate(45deg);
+  }
+}
+
+// &:checked
+.feedback form div:nth-of-type(2) > input[type="checkbox"]:checked + label::after {
+  display: block;
 }
