@@ -15,7 +15,7 @@
       // Picture element HTML5 shiv
       document.createElement("picture");
     </script>
-    <script src="js/picturefill.min.js" async=""></script>
+    <!-- <script src="js/picturefill.min.js" async></script> -->
   </head>
   <body class="main-page">
 
@@ -50,7 +50,7 @@
 
             <ul class="header-nav__list">
               <li class="header-nav__item">
-                <a href="mailto:info@sd.ru" aria-label="Наша почта">
+                <a class="header-nav__link" href="mailto:info@sd.ru" aria-label="Наша почта">
                   <svg>
                     <use xlink:href="#icon-mail"></use>
                   </svg>
@@ -58,7 +58,7 @@
                 </a>
               </li>
               <li class="header-nav__item">
-                <a href="tel:+7(495)0005252" aria-label="Наш телефон">
+                <a class="header-nav__link" href="tel:+7(495)0005252" aria-label="Наш телефон">
                   <svg>
                     <use xlink:href="#icon-phone"></use>
                   </svg>
@@ -67,7 +67,7 @@
               </li>
             </ul>
 
-            <a href="#">Заказать звонок</a>
+            <a class="header-nav__link header-nav__link--popup" href="#">Заказать звонок</a>
           </div>
 
         </div>
@@ -335,11 +335,7 @@
 
             <ul class="main-footer__addition-list">
               <li class="main-footer__addition-item">Все права защищены</li>
-              <li class="main-footer__addition-item">
-                <a href="#">
-                  1999-2018 SD Service Devices
-                </a>
-              </li>
+              <li class="main-footer__addition-item">1999-2018 SD Service Devices</li>
               <li class="main-footer__addition-item">
                 <a href="#">
                   Условия конфиденциальности
@@ -368,10 +364,10 @@
 
         <form action="#" method="POST">
 
-          <input type="text" name="name" aria-label="Введите ваше имя" placeholder="Имя">
-          <input type="tel" name="phone" aria-label="Введите ваше телефон" placeholder="Телефон">
+          <input type="text" name="name" aria-label="Введите ваше имя" placeholder="Имя" required="">
+          <input type="tel" name="phone" aria-label="Введите ваше телефон" placeholder="Телефон" required="">
 
-          <textarea name="message" aria-label="Введите ваше сообщение" placeholder="Ваш вопрос"></textarea>
+          <textarea name="message" aria-label="Введите ваше сообщение" placeholder="Ваш вопрос" required=""></textarea>
 
           <button class="popup__button-submit" type="submit">Отправить</button>
 
@@ -404,7 +400,8 @@
 </symbol></svg>
     </div>
 
-    <script src="js/objectFit.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
     <script>
       objectFitImages();
     </script>
