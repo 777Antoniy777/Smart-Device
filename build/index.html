@@ -183,15 +183,15 @@
 
               <div>
                 <div>
-                  <input type="text" name="name" aria-label="Введите ваше имя" placeholder="Имя">
+                  <input type="text" name="name" aria-label="Введите ваше имя" placeholder="Имя" required="">
                 </div>
                 <div>
-                  <input type="tel" name="phone" aria-label="Введите ваше телефон" placeholder="Телефон">
+                  <input type="tel" name="phone" aria-label="Введите ваше телефон" placeholder="Телефон" required="">
                 </div>
               </div>
 
               <div>
-                <textarea name="message" aria-label="Введите ваше сообщение" placeholder="Ваш вопрос"></textarea>
+                <textarea name="message" aria-label="Введите ваше сообщение" placeholder="Ваш вопрос" required=""></textarea>
               </div>
 
               <div>
@@ -357,6 +357,35 @@
       </div>
     </footer>
 
+    <!-- Попап -->
+    <div class="popup hidden">
+      <div class="popup__wrapper title">
+        <h2 class="visually-hidden">Попап обратной связи</h2>
+
+        <button class="popup__button-close" aria-label="Закрыть попап" type="button"></button>
+        <p class="popup__description popup__description--first">Закажите звонок</p>
+        <p class="popup__description popup__description--second">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+        <form action="#" method="POST">
+
+          <input type="text" name="name" aria-label="Введите ваше имя" placeholder="Имя">
+          <input type="tel" name="phone" aria-label="Введите ваше телефон" placeholder="Телефон">
+
+          <textarea name="message" aria-label="Введите ваше сообщение" placeholder="Ваш вопрос"></textarea>
+
+          <button class="popup__button-submit" type="submit">Отправить</button>
+
+          <div class="popup__checkbox-wrapper">
+            <input type="checkbox" id="popup-argee" name="agree">
+            <label for="popup-argee">Я согласен на обработку персональных данных</label>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+    <!-- svg-sprite -->
     <div style="display: none;">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-classmates" viewbox="0 0 27 26">
 <path d="M13.8512 10.957C14.8668 10.957 15.6568 10.1213 15.638 9.2113C15.6568 8.3013 14.8857 7.44702 13.87 7.44702C12.892 7.44702 12.0833 8.22702 12.0833 9.19273C12.0833 10.1584 12.8732 10.957 13.8512 10.957Z" fill="#CDCDCD"></path>
