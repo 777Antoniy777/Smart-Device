@@ -175,26 +175,35 @@
         <div class="site-wrapper">
           <h2 class="visually-hidden">Форма обратной связи</h2>
 
-          <p>Остались вопросы? Задайте их нам!</p>
-          <p>Мы проконсультируем Вас бесплатно</p>
+          <div class="feedback__wrapper">
+            <p>Остались вопросы? Задайте их нам!</p>
+            <p>Мы проконсультируем Вас бесплатно</p>
 
-          <form action="#" method="POST">
+            <form action="#" method="POST">
 
-            <div>
-              <input type="text" name="name" aria-label="Введите ваше имя" placeholder="Имя">
-              <input type="tel" name="phone" aria-label="Введите ваше телефон" placeholder="Телефон">
-            </div>
-            
-            <textarea name="message" aria-label="Введите ваше сообщение" placeholder="Ваш вопрос"></textarea>
+              <div>
+                <div>
+                  <input type="text" name="name" aria-label="Введите ваше имя" placeholder="Имя">
+                </div>
+                <div>
+                  <input type="tel" name="phone" aria-label="Введите ваше телефон" placeholder="Телефон">
+                </div>
+              </div>
 
-            <div>
-              <button type="submit">Задать вопрос</button>
+              <div>
+                <textarea name="message" aria-label="Введите ваше сообщение" placeholder="Ваш вопрос"></textarea>
+              </div>
 
-              <input type="checkbox" id="argee" name="agree">
-              <label for="argee">Я согласен на обработку персональных данных</label>
-            </div>
+              <div>
+                <button type="submit">Задать вопрос</button>
 
-          </form>
+                <input type="checkbox" id="argee" name="agree">
+                <label for="argee">Я согласен на обработку персональных данных</label>
+              </div>
+
+            </form>
+          </div>
+
         </div>
       </section>
 

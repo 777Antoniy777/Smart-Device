@@ -1,54 +1,154 @@
 .feedback {
-  @include background(100% 63%);
   padding: 92px 20px 114px;
   color: $white;
   background-image: url("../img/triangle-feedback-bg.svg");
-  background-size: 1744px 114%;
+  background-size: 91% 114%;
+  background-position: 100% 63%;
+  background-repeat: no-repeat;
   background-color: $feature-bg;
+
+  @media (max-width: $tablet-width) {
+    padding: 83px 25px 105px;
+    background-image: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 33px 15px 42px;
+  }
 }
 
 .feedback .site-wrapper {
   @include flex(column, flex-end);
-  max-width: 1170px;
+  max-width: 1225px;
   width: 100%;
+  padding-right: 27px;
+  background-image: url("../img/plane@1x.png");
+  background-size: 41.7% 62%;
+  background-position: 0% 39%;
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    align-items: center;
+    min-width: 590px;
+    padding-right: 0;
+    background-image: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+  }
+}
+
+.feedback__wrapper {
+  max-width: 570px;
+  min-width: 400px;
+  width: calc(570 * 100% / 1198);
+
+  @media (max-width: $tablet-width) {
+    @include flex(column, center);
+    max-width: unset;
+    width: 590px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+    width: 100%;
+  }
 }
 
 .feedback p {
   &:nth-of-type(1) {
     @include font(36, 51);
-    max-width: 575px;
-    width: 100%;
+    position: relative;
+    left: -3px;
     padding-bottom: 9px;
     font-family: $roboto-condensed;
+
+    @media (max-width: 1210px) {
+      width: 330px;
+      padding-bottom: 22px;
+    }
+
+    @media (max-width: $tablet-width) {
+      @include font(32, 36);
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-width) {
+      @include font(28, 36);
+      left: 0;
+      padding-bottom: 16px;
+    }
   }
 
   &:nth-of-type(2) {
     @include font($font-size-desk, $line-height-desk);
-    max-width: 570px;
-    width: 100%;
     padding-bottom: 51px;
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+      padding-left: 3px;
+      padding-bottom: 53px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-left: 0;
+      padding-bottom: 26px;
+    }
   }
 }
 
 .feedback form {
   @include flex(column);
-  width: 570px;
+
+  @media (max-width: $tablet-width) {
+    width: inherit;
+    padding-left: 2px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+  }
 }
 
 .feedback form div {
   @include flex(row, center);
-  justify-content: space-between;
+  justify-content: flex-start;
 
-  &:nth-of-type(1) {
+  &:nth-child(1) {
     flex-wrap: wrap;
     margin-bottom: 41px;
   }
+
+  &:nth-child(2) {
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: $tablet-width) {
+    &:nth-child(2) {
+      margin-bottom: 46px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+
+    &:nth-child(1) {
+      align-items: flex-start;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
-.feedback form div:nth-of-type(1) > input,
-.feedback form > textarea {
+.feedback form div:nth-of-type(1) div > input,
+.feedback form div > textarea {
   @include font($font-size-desk, $line-height-desk);
   padding-left: 16px;
+  padding-right: 16px;
   color: $white;
   background-color: rgba($white, 0.1);
   border: none;
@@ -58,46 +158,113 @@
     color: $white;
     opacity: 1;
   }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 17px;
+  }
 }
 
-.feedback form div:nth-of-type(1) > input {
+.feedback form div:nth-of-type(1) div,
+.feedback form div:nth-of-type(2) {
+  background-color: $feature-bg;
+}
+
+.feedback form div:nth-of-type(1) div {
+  width: calc(270 * 100% / 570);
+  margin-right: calc(29 * 100% / 570);
+  margin-bottom: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.feedback form div:nth-of-type(1) div > input {
   @include flex(row, center);
-  width: 270px;
+  width: 100%;
   height: 50px;
   padding-bottom: 5px;
+
+  @media (max-width: $tablet-width) {
+    height: 52px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.feedback form div:nth-of-type(1) div:last-child > input {
+  margin-bottom: 0;
 }
 
 // for FF
 /* stylelint-disable */
-_::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) > input {
+_::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) div > input {
   padding-top: 13px;
   padding-bottom: 15px;
 }
 /* stylelint-enable */
 
-.feedback form > textarea {
-  width: 570px;
+.feedback form div > textarea {
+  width: 100%;
   height: 154px;
-  margin-bottom: 42px;
   padding: 10px 20px 10px 16px;
   resize: none;
+
+  @media (max-width: $tablet-width) {
+    height: 160px;
+    padding-top: 12px;
+    padding-left: 17px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 104px;
+  }
 }
 
-.feedback form div:nth-of-type(2) > button {
+.feedback form div:nth-of-type(3) > button {
   @include font(14, 16, $bold);
   font-family: $roboto-condensed;
-  width: 270px;
+  width: calc(270 * 100% / 570);
   min-height: 45px;
-  margin-right: 38px;
+  margin-right: 35px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $white;
   background-color: transparent;
   border: 1px solid $white;
   border-radius: 5px;
+  transition: color 0.3s,
+              background-color 0.3s,
+              border-color 0.3s;
+
+  // &:hover
+  &:hover {
+    color: $black;
+    background-color: #48c5fb;
+    border-color: $black;
+  }
+
+  // &:active
+  &:active {
+    color: $black;
+    background-color: #1e96ca;
+    border-color: $black;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
 }
 
-.feedback form div:nth-of-type(2) > input[type="checkbox"] {
+.feedback form div:nth-of-type(3) > input[type="checkbox"] {
   position: absolute;
   width: 0;
   height: 0;
@@ -105,10 +272,11 @@ _::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) > input {
   overflow: hidden;
 }
 
-.feedback form div:nth-of-type(2) > label {
+.feedback form div:nth-of-type(3) > label {
   @include font(14, 16);
   position: relative;
-  width: 230px;
+  width: calc(264 * 100% / 570);
+  padding-left: 34px;
   color: rgba($white, 0.8);
   cursor: pointer;
 
@@ -119,7 +287,7 @@ _::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) > input {
 
   &::before {
     top: 2px;
-    left: -32px;
+    left: 2px;
     width: 16px;
     height: 16px;
     border: 1px solid $white;
@@ -128,16 +296,42 @@ _::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) > input {
   &::after {
     display: none;
     top: 4px;
-    left: -28px;
+    left: 6px;
     width: 9px;
     height: 7px;
     border: 1px solid $white;
     clip: rect(2px, auto, auto, 2px);
     transform: scale(-1, 1) rotate(45deg);
   }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 39px;
+
+    &::before {
+      left: 6px;
+    }
+
+    &::after {
+      left: 10px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-left: 34px;
+    padding-right: 10px;
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      left: 4px;
+    }
+  }
 }
 
 // &:checked
-.feedback form div:nth-of-type(2) > input[type="checkbox"]:checked + label::after {
+.feedback form div:nth-of-type(3) > input[type="checkbox"]:checked + label::after {
   display: block;
 }
