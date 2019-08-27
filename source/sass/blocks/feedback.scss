@@ -245,16 +245,16 @@ _::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) div > inp
 
   // &:hover
   &:hover {
-    color: $black;
-    background-color: #48c5fb;
-    border-color: $black;
+    color: $feature-bg;
+    background-color: $white;
+    border-color: $feature-bg;
   }
 
   // &:active
   &:active {
-    color: $black;
-    background-color: #1e96ca;
-    border-color: $black;
+    color: $feature-bg;
+    background-color: rgba($white, 0.7);
+    border-color: $feature-bg;
   }
 
   @media (max-width: $mobile-width) {
