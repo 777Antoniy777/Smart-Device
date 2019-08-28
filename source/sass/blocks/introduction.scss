@@ -114,6 +114,17 @@
   background-color: $feature-bg;
   border-radius: 5px;
   letter-spacing: 0.05em;
+  transition: background-color 0.3s;
+
+  // &:hover
+  &:hover {
+    background-color: rgba($feature-bg, 0.7);
+  }
+
+  // &:active
+  &:active {
+    background-color: rgba($feature-bg, 0.5);
+  }
 
   // for IE
   /* stylelint-disable */
