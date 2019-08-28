@@ -2,7 +2,7 @@
   padding: 92px 20px 114px;
   color: $white;
   background-image: url("../img/triangle-feedback-bg.svg");
-  background-size: 91% 114%;
+  background-size: 90.9% auto;
   background-position: 100% 63%;
   background-repeat: no-repeat;
   background-color: $feature-bg;
@@ -23,7 +23,7 @@
   width: 100%;
   padding-right: 27px;
   background-image: url("../img/plane@1x.png");
-  background-size: 41.7% 62%;
+  background-size: 42% auto;
   background-position: 0% 39%;
   background-repeat: no-repeat;
 
@@ -253,7 +253,7 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
   overflow: hidden;
 }
 
-.feedback__button-wrapper label[for="agree"] {
+.feedback input[type="checkbox"] + label {
   @include font(14, 16);
   position: relative;
   width: calc(264 * 100% / 570);

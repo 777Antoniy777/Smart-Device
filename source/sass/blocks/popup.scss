@@ -14,12 +14,18 @@
   top: 50%;
   left: 50%;
   z-index: 3;
+  max-width: 490px;
   width: 490px;
   min-height: 605px;
   padding: 16px 39px 21px;
   color: $white;
   background-color: $feature-bg;
   transform: translate(-50%, -50%);
+
+  @media (max-width: $mobile-width) {
+    width: calc(490 * 100% / 767);
+    min-width: 290px;
+  }
 }
 
 .popup__button-close {
@@ -52,18 +58,16 @@
   }
 }
 
-.popup__description {
-  &--first {
-    @include font(28, 32);
-    padding-bottom: 16px;
-    font-family: $roboto-condensed;
-  }
+.popup__title {
+  @include font(28, 32);
+  padding-bottom: 16px;
+  font-family: $roboto-condensed;
+}
 
-  &--second {
-    @include font($font-size-desk, $line-height-desk);
-    padding-right: 25px;
-    padding-bottom: 33px;
-  }
+.popup__description {
+  @include font($font-size-desk, $line-height-desk);
+  padding-right: 25px;
+  padding-bottom: 33px;
 }
 
 form > input,
@@ -83,7 +87,7 @@ form > textarea {
 
 form > input {
   @include flex(row, center);
-  width: 412px;
+  width: 100%;
   height: 52px;
   margin-bottom: 30px;
 }
@@ -97,7 +101,7 @@ _::-moz-range-track, body:last-child form > input {
 /* stylelint-enable */
 
 form > textarea {
-  width: 412px;
+  width: 100%;
   height: 104px;
   margin-bottom: 24px;
   padding-top: 12px;
@@ -107,7 +111,7 @@ form > textarea {
 .popup__button-submit {
   @include font(14, 16, $bold);
   font-family: $roboto-condensed;
-  width: 412px;
+  width: 100%;
   min-height: 46px;
   margin-bottom: 34px;
   text-transform: uppercase;
@@ -135,7 +139,7 @@ form > textarea {
   }
 }
 
-.popup__checkbox-wrapper input[type="checkbox"] {
+input[type="checkbox"] {
   position: absolute;
   width: 0;
   height: 0;
@@ -143,7 +147,7 @@ form > textarea {
   overflow: hidden;
 }
 
-.popup__checkbox-wrapper label {
+input[type="checkbox"] + label {
   @include font(14, 16);
   position: relative;
   display: block;
@@ -179,7 +183,7 @@ form > textarea {
 }
 
 // &:checked
-.popup__checkbox-wrapper input[type="checkbox"]:checked + label::after {
+input[type="checkbox"]:checked + label::after {
   display: block;
 }
 

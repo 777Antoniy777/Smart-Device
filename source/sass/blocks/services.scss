@@ -64,6 +64,7 @@
   &::after {
     @include pseudo;
     z-index: 1;
+    pointer-events: none;
   }
 
   &::before {
