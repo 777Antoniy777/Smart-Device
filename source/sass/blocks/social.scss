@@ -5,6 +5,11 @@
   @media (max-width: $tablet-width) {
     width: 111px;
   }
+
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+    width: 300px;
+  }
 }
 
 .social__item {
@@ -21,7 +26,18 @@
   }
 }
 
-.social__item a > svg {
+.social__link > svg {
   width: 27px;
   height: 27px;
+  transition: opacity 0.3s;
+
+  // &:hover
+  &:hover {
+    opacity: 0.7;
+  }
+
+  // &:active
+  &:active {
+    opacity: 0.5;
+  }
 }

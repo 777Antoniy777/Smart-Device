@@ -115,46 +115,33 @@
   }
 }
 
-.feedback form div {
+.feedback__input-wrapper,
+.feedback__button-wrapper {
   @include flex(row, center);
   justify-content: flex-start;
 
-  &:nth-child(1) {
-    flex-wrap: wrap;
-    margin-bottom: 41px;
-  }
-
-  &:nth-child(2) {
-    margin-bottom: 42px;
-  }
-
-  @media (max-width: $tablet-width) {
-    &:nth-child(2) {
-      margin-bottom: 46px;
-    }
-  }
-
   @media (max-width: $mobile-width) {
     flex-direction: column;
-
-    &:nth-child(1) {
-      align-items: flex-start;
-    }
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      margin-bottom: 30px;
-    }
+    align-items: flex-start;
   }
 }
 
-.feedback form div:nth-of-type(1) div > input,
-.feedback form div > textarea {
+.feedback__input-wrapper {
+  margin-bottom: 41px;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__input-wrapper > input,
+.feedback textarea {
   @include font($font-size-desk, $line-height-desk);
   padding-left: 16px;
   padding-right: 16px;
   color: $white;
-  background-color: rgba($white, 0.1);
+  background-color: #19baff;
   border: none;
 
   &::placeholder {
@@ -168,70 +155,60 @@
   }
 }
 
-.feedback form div:nth-of-type(1) div,
-.feedback form div:nth-of-type(2) {
-  background-color: $feature-bg;
-}
-
-.feedback form div:nth-of-type(1) div {
+.feedback__input-wrapper > input {
+  @include flex(row, center);
   width: calc(270 * 100% / 570);
+  height: 50px;
   margin-right: calc(29 * 100% / 570);
-  margin-bottom: 0;
+  padding-bottom: 5px;
 
   &:last-child {
     margin-right: 0;
   }
-
-  @media (max-width: $mobile-width) {
-    width: 100%;
-  }
-}
-
-.feedback form div:nth-of-type(1) div > input {
-  @include flex(row, center);
-  width: 100%;
-  height: 50px;
-  padding-bottom: 5px;
 
   @media (max-width: $tablet-width) {
     height: 52px;
   }
 
   @media (max-width: $mobile-width) {
+    width: 100%;
     margin-bottom: 30px;
-  }
-}
 
-.feedback form div:nth-of-type(1) div:last-child > input {
-  margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // for FF
 /* stylelint-disable */
-_::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) div > input {
+_::-moz-range-track, body:last-child .feedback__input-wrapper > input {
   padding-top: 13px;
   padding-bottom: 15px;
 }
 /* stylelint-enable */
 
-.feedback form div > textarea {
+.feedback textarea {
   width: 100%;
   height: 154px;
+  margin-bottom: 42px;
   padding: 10px 20px 10px 16px;
   resize: none;
 
   @media (max-width: $tablet-width) {
     height: 160px;
+    margin-bottom: 46px;
     padding-top: 12px;
     padding-left: 17px;
   }
 
   @media (max-width: $mobile-width) {
     height: 104px;
+    margin-bottom: 30px;
   }
 }
 
-.feedback form div:nth-of-type(3) > button {
+.feedback__button-wrapper button {
   @include font(14, 16, $bold);
   font-family: $roboto-condensed;
   width: calc(270 * 100% / 570);
@@ -268,7 +245,7 @@ _::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) div > inp
   }
 }
 
-.feedback form div:nth-of-type(3) > input[type="checkbox"] {
+.feedback__button-wrapper input[type="checkbox"] {
   position: absolute;
   width: 0;
   height: 0;
@@ -276,7 +253,7 @@ _::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) div > inp
   overflow: hidden;
 }
 
-.feedback form div:nth-of-type(3) > label {
+.feedback__button-wrapper label[for="agree"] {
   @include font(14, 16);
   position: relative;
   width: calc(264 * 100% / 570);
@@ -336,6 +313,6 @@ _::-moz-range-track, body:last-child .feedback form div:nth-of-type(1) div > inp
 }
 
 // &:checked
-.feedback form div:nth-of-type(3) > input[type="checkbox"]:checked + label::after {
+.feedback__button-wrapper input[type="checkbox"]:checked + label::after {
   display: block;
 }

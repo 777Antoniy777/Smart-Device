@@ -16,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-.title {
+.text-content {
   h1,
   h2,
   h3,
@@ -32,42 +32,5 @@ body {
   max-width: 1414px;
   width: 100%;
   margin: 0 auto;
-}
-
-// special classes
-.accordion-close {
-  &::before,
-  &::after {
-    @include pseudo;
-    width: 17px;
-    height: 1px;
-    background-color: #c4c4c4;
-  }
-
-  &::before {
-    top: 8px;
-    left: 0;
-  }
-
-  &::after {
-    bottom: 8px;
-    left: 0;
-    transform: rotate(90deg);
-  }
-}
-
-.accordion-open {
-  &::before {
-    @include pseudo;
-    top: 8px;
-    left: 0;
-    width: 17px;
-    height: 1px;
-    background-color: #c4c4c4;
-  }
-}
-
-.hidden {
-  display: none;
 }
 
