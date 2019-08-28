@@ -1,0 +1,110 @@
+.section {
+  width: calc(617 * 100% / 993);
+
+  @media (max-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding: 0 15px;
+    border-bottom: 1px solid rgba(#626962, 0.2);
+  }
+}
+
+.section__wrapper {
+  padding-bottom: 24px;
+
+  @media (max-width: $mobile-width) {
+    @include flex(row, center);
+    justify-content: space-between;
+    padding: 27px 0;
+  }
+}
+
+.section__wrapper > h3 {
+  @include font(15, 18);
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section__wrapper > button {
+  position: relative;
+  display: none;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.section__nav {
+  @media (max-width: $mobile-width) {
+    margin-top: 3px;
+    margin-bottom: 27px;
+  }
+}
+
+.section__nav-list {
+  @include flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.section__nav-item {
+  width: 50%;
+
+  &--company {
+    order: 1;
+  }
+
+  &--products {
+    order: 3;
+  }
+
+  &--production {
+    order: 5;
+  }
+
+  &--installation {
+    order: 7;
+  }
+
+  &--accessories {
+    order: 2;
+  }
+
+  &--delivery {
+    order: 4;
+  }
+
+  &--contacts {
+    order: 6;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+
+    &--company,
+    &--products,
+    &--production,
+    &--installation,
+    &--accessories,
+    &--delivery,
+    &--contacts {
+      order: unset;
+    }
+  }
+}
+
+.section__nav-item > a {
+  @include font(15, 25);
+}
+

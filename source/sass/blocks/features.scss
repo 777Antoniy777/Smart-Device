@@ -1,0 +1,125 @@
+.features {
+  padding: 111px 20px 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 54px 25px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 37px 15px 0;
+  }
+}
+
+.features .site-wrapper {
+  max-width: 1170px;
+  width: 100%;
+}
+
+.features__list {
+  @include flex(row center);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.features__item {
+  @include flex(column);
+  max-width: 570px;
+  width: calc(570 * 100% / 1170);
+  min-height: 299px;
+  margin-right: calc(29 * 100% / 1170);
+  margin-bottom: 30px;
+  padding: 41px 41px 26px 43px;
+  background-color: $white;
+  border: 1px solid #ebebeb;
+  border-left: 2px solid $feature-bg;
+  transition: background-color 0.3s,
+              border-color 0.3s,
+              transform 0.3s;
+  cursor: pointer;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  // &:hover
+  &:hover {
+    background-color: $feature-bg;
+    border-color: $feature-bg;
+    transform: translateY(-5px);
+  }
+
+  @media (max-width: $tablet-width) {
+    width: calc(561 * 100% / 1170);
+    min-height: 233px;
+    margin-right: calc(47 * 100% / 1170);
+    padding: 21px 21px 19px 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+    width: 100%;
+    min-height: 232px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 25px 17px 23px 25px;
+
+    &--suppliers {
+      padding-right: 12px;
+    }
+  }
+}
+
+.features__item > h3 {
+  @include font(24, 34);
+  padding-bottom: 14px;
+  font-family: $roboto-condensed;
+  color: $feature-bg;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 9px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font(20, 22);
+    padding-bottom: 13px;
+  }
+}
+
+.features__item > p {
+  @include font($font-size-desk, $line-height-desk);
+  color: $feature-color;
+}
+
+.features__item > svg {
+  order: -1;
+  margin-bottom: 20px;
+  fill: $feature-bg;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 14px;
+  }
+}
+
+// &:hover
+.features__item > h3,
+.features__item > p,
+.features__item > svg {
+  transition: 0.3s;
+}
+
+.features__item:hover > h3,
+.features__item:hover > p {
+  color: $white;
+}
+
+.features__item:hover > svg {
+  fill: $white;
+}
