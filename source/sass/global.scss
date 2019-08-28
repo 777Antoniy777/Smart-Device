@@ -35,7 +35,7 @@ body {
 }
 
 // special classes
-.accordion-open {
+.accordion-close {
   &::before,
   &::after {
     @include pseudo;
@@ -56,7 +56,7 @@ body {
   }
 }
 
-.accordion-close {
+.accordion-open {
   &::before {
     @include pseudo;
     top: 8px;
