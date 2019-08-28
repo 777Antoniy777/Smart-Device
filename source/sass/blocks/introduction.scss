@@ -59,6 +59,13 @@
   padding-top: 57px;
   padding-left: 72px;
 
+  // for IE
+  /* stylelint-disable */
+  @media (max-width: 1605px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    width: auto;
+  }
+  /* stylelint-enable */
+
   @media (max-width: $tablet-width) {
     width: 454px;
     min-height: 410px;
@@ -89,6 +96,17 @@
   position: relative;
   padding-bottom: 28px;
   letter-spacing: 0.07em;
+
+  // for IE
+  /* stylelint-disable */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    width: 790px;
+  }
+
+  @media (max-width: 1605px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    width: 100%;
+  }
+  /* stylelint-enable */
 
   @media (max-width: $tablet-width) {
     @include font(60, 70, $bold);
