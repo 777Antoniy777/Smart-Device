@@ -25,7 +25,7 @@
         <div class="site-wrapper">
 
           <div class="header-nav__logo-wrapper">
-            <a>
+            <a class="header-nav__logo-link">
 
               <svg fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
                 <title>Магазин "Smart Device"</title>
@@ -46,20 +46,20 @@
 
           <div class="header-nav__wrapper">
 
-            <button type="button" aria-label="Меню сайта"></button>
+            <button class="header-nav__menu-button" type="button" aria-label="Меню сайта"></button>
 
             <ul class="header-nav__list">
               <li class="header-nav__item">
-                <a class="header-nav__link" href="mailto:info@sd.ru" aria-label="Наша почта">
-                  <svg>
+                <a class="header-nav__link header-nav__link--email" href="mailto:info@sd.ru" aria-label="Наша почта">
+                  <svg width="19" height="14">
                     <use xlink:href="#icon-mail"/>
                   </svg>
                   <p>info@sd.ru</p>
                 </a>
               </li>
               <li class="header-nav__item">
-                <a class="header-nav__link" href="tel:+7(495)0005252" aria-label="Наш телефон">
-                  <svg>
+                <a class="header-nav__link header-nav__link--phone" href="tel:+7(495)0005252" aria-label="Наш телефон">
+                  <svg width="18" height="18">
                     <use xlink:href="#icon-phone"/>
                   </svg>
                   <p>+7 (495) 000 52 52</p>
@@ -105,21 +105,33 @@
           <h2 class="visually-hidden">Наши особенности</h2>
 
           <ul class="features__list">
-            <li class="features__item">
+            <li class="features__item features__item--watch">
               <h3>Оперативные сроки</h3>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+              <svg width="29" height="35">
+                <use xlink:href="#icon-watch"/>
+              </svg>
             </li>
-            <li class="features__item">
+            <li class="features__item features__item--suppliers">
               <h3>Крупные поставщики</h3>
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+              <svg width="35" height="35">
+                <use xlink:href="#icon-suppliers"/>
+              </svg>
             </li>
-            <li class="features__item">
+            <li class="features__item features__item--detective">
               <h3>Полная конфиденциальность</h3>
               <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+              <svg width="36" height="31">
+                <use xlink:href="#icon-detective"/>
+              </svg>
             </li>
-            <li class="features__item">
+            <li class="features__item features__item--price">
               <h3>Персонализация стоимости</h3>
               <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+              <svg width="35" height="35">
+                <use xlink:href="#icon-price"/>
+              </svg>
             </li>
           </ul>
 
@@ -134,13 +146,8 @@
             <h2>О компании</h2>
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-            <a href="#">Подробнее</a>
+            <a class="about__link" href="#">Подробнее</a>
           </div>
-
-          <!-- 1х: 220px; 2x: 440px -->
-          <img src="img/year@1x.png"
-          srcset="img/year@1x.png 1x, img/year@2x.png 2x"
-          alt="2005 год">
 
         </div>
       </section>
@@ -155,7 +162,7 @@
               <a href="#">
                 <h3>Производство печатных плат</h3>
                 <img src="img/service-1@1x.jpg"
-                srcset="img/service-1@1x.jpg 1x, img/yservice-1@2x.jpg 2x"
+                srcset="img/service-1@1x.jpg 1x, img/service-1@2x.jpg 2x"
                 alt="2005 год">
               </a>
             </li>

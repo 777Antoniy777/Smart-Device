@@ -1,10 +1,10 @@
 .about {
   padding-top: 76px;
-  padding-bottom: 96px;
+  padding-bottom: 89px;
 
   @media (max-width: $tablet-width) {
     padding-top: 21px;
-    padding-bottom: 78px;
+    padding-bottom: 29px;
   }
 
   @media (max-width: $mobile-width) {
@@ -17,35 +17,42 @@
   @include flex(row-reverse);
   max-width: 1291px;
   width: 100%;
-  padding-left: 30px;
+  padding-left: 241px;
+  padding-bottom: 20px;
+  background-image: url("../img/year@1x.png");
+  background-size: 220px 317px;
+  background-position: 29px 6px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/year@2x.png");
+  }
 
   @media (max-width: $tablet-width) {
-    padding-left: 0;
-    padding-right: 15px;
+    padding: 0 15px 55px 212px;
+    background-size: 250px 360px;
+    background-position: -8px 4px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
+    background-image: none;
   }
 }
 
 .about__wrapper {
-  position: relative;
-  left: -10px;
-  z-index: 1;
-  padding-right: 53px;
+  padding-right: 72px;
 
   @media (max-width: $tablet-width) {
-    left: -24px;
-    width: calc(562 * 100% / 770);
+    width: 100%;
+    min-height: 355px;
     padding-top: 8px;
-    padding-right: 0;
+    padding-right: 18px;
   }
 
   @media (max-width: $mobile-width) {
-    left: 0;
-    width: 100%;
+    min-height: unset;
+    padding-right: 0;
   }
 }
 
@@ -100,7 +107,7 @@
   }
 }
 
-.about__wrapper > a {
+.about__link {
   @include font(14, 16, $bold);
   @include link(none, $feature-bg);
   @include flex(row, center);
