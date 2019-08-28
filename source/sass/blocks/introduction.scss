@@ -236,3 +236,9 @@
     height: 220px;
   }
 }
+
+.introduction .site-wrapper picture {
+  @media (max-width: $mobile-width) {
+    align-self: flex-end;
+  }
+}
