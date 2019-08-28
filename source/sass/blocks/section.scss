@@ -61,44 +61,44 @@
 .section__nav-item {
   width: 50%;
 
-  &:nth-child(1) {
+  &--company {
     order: 1;
   }
 
-  &:nth-child(2) {
+  &--products {
     order: 3;
   }
 
-  &:nth-child(3) {
+  &--production {
     order: 5;
   }
 
-  &:nth-child(4) {
+  &--installation {
     order: 7;
   }
 
-  &:nth-child(5) {
+  &--accessories {
     order: 2;
   }
 
-  &:nth-child(6) {
+  &--delivery {
     order: 4;
   }
 
-  &:nth-child(7) {
+  &--contacts {
     order: 6;
   }
 
   @media (max-width: $tablet-width) {
     width: auto;
 
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6),
-    &:nth-child(7) {
+    &--company,
+    &--products,
+    &--production,
+    &--installation,
+    &--accessories,
+    &--delivery,
+    &--contacts {
       order: unset;
     }
   }
@@ -106,6 +106,5 @@
 
 .section__nav-item > a {
   @include font(15, 25);
-  @include link(none, $footer-color);
 }
 

@@ -1,0 +1,36 @@
+// special classes
+.accordion-close {
+  &::before,
+  &::after {
+    @include pseudo;
+    width: 17px;
+    height: 1px;
+    background-color: #c4c4c4;
+  }
+
+  &::before {
+    top: 8px;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 8px;
+    left: 0;
+    transform: rotate(90deg);
+  }
+}
+
+.accordion-open {
+  &::before {
+    @include pseudo;
+    top: 8px;
+    left: 0;
+    width: 17px;
+    height: 1px;
+    background-color: #c4c4c4;
+  }
+}
+
+.hidden {
+  display: none;
+}

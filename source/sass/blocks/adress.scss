@@ -43,6 +43,8 @@
 }
 
 .adress__list {
+  font-style: normal;
+
   @media (max-width: $mobile-width) {
     width: 70%;
     margin-top: 3px;
@@ -50,15 +52,7 @@
   }
 }
 
-.adress__item,
-.adress__item > a {
+.adress__description {
   @include font(15, 25);
-}
-
-.adress__item {
-  color: $footer-color;
-}
-
-.adress__item > a {
-  @include link(none, $footer-color);
+  color: rgba($footer-color, 0.5);
 }
