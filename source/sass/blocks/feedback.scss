@@ -60,50 +60,50 @@
   }
 }
 
-.feedback p {
-  &:nth-of-type(1) {
-    @include font(36, 51);
-    position: relative;
-    left: -3px;
-    padding-bottom: 9px;
-    font-family: $roboto-condensed;
+.feedback h2 {
+  @include font(36, 51);
+  position: relative;
+  left: -3px;
+  padding-bottom: 9px;
+  font-family: $roboto-condensed;
 
-    @media (max-width: 1210px) {
-      width: 330px;
-      padding-bottom: 22px;
-    }
-
-    @media (max-width: $tablet-width) {
-      @include font(32, 36);
-      width: 100%;
-    }
-
-    @media (max-width: $mobile-width) {
-      @include font(28, 36);
-      left: 0;
-      padding-bottom: 16px;
-    }
+  @media (max-width: 1210px) {
+    width: 330px;
+    padding-bottom: 22px;
   }
 
-  &:nth-of-type(2) {
-    @include font($font-size-desk, $line-height-desk);
-    padding-bottom: 51px;
+  @media (max-width: $tablet-width) {
+    @include font(32, 36);
+    width: 100%;
+  }
 
-    @media (max-width: $tablet-width) {
-      width: 100%;
-      padding-left: 3px;
-      padding-bottom: 53px;
-    }
+  @media (max-width: $mobile-width) {
+    @include font(28, 36);
+    left: 0;
+    padding-bottom: 16px;
+  }
+}
 
-    @media (max-width: $mobile-width) {
-      padding-left: 0;
-      padding-bottom: 26px;
-    }
+.feedback p {
+  @include font($font-size-desk, $line-height-desk);
+  padding-bottom: 51px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-left: 3px;
+    padding-bottom: 53px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-bottom: 26px;
   }
 }
 
 .feedback form {
-  @include flex(column);
+  @include flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     width: inherit;
@@ -115,29 +115,10 @@
   }
 }
 
-.feedback__input-wrapper,
-.feedback__button-wrapper {
-  @include flex(row, center);
-  justify-content: flex-start;
-
-  @media (max-width: $mobile-width) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.feedback__input-wrapper {
-  margin-bottom: 41px;
-  flex-wrap: wrap;
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 30px;
-  }
-}
-
-.feedback__input-wrapper > input,
-.feedback textarea {
+.feedback__wrapper input,
+.feedback__wrapper textarea {
   @include font($font-size-desk, $line-height-desk);
+  margin-bottom: 41px;
   padding-left: 16px;
   padding-right: 16px;
   color: $white;
@@ -155,16 +136,11 @@
   }
 }
 
-.feedback__input-wrapper > input {
+.feedback__wrapper input {
   @include flex(row, center);
   width: calc(270 * 100% / 570);
   height: 50px;
-  margin-right: calc(29 * 100% / 570);
   padding-bottom: 5px;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   @media (max-width: $tablet-width) {
     height: 52px;
@@ -173,22 +149,18 @@
   @media (max-width: $mobile-width) {
     width: 100%;
     margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 
 // for FF
 /* stylelint-disable */
-_::-moz-range-track, body:last-child .feedback__input-wrapper > input {
+_::-moz-range-track, body:last-child .feedback__wrapper input {
   padding-top: 13px;
   padding-bottom: 15px;
 }
 /* stylelint-enable */
 
-.feedback textarea {
+.feedback__wrapper textarea {
   width: 100%;
   height: 154px;
   margin-bottom: 42px;
@@ -208,12 +180,12 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
   }
 }
 
-.feedback__button-wrapper button {
+.feedback__wrapper button {
   @include font(14, 16, $bold);
   font-family: $roboto-condensed;
   width: calc(270 * 100% / 570);
   min-height: 45px;
-  margin-right: 35px;
+  margin-right: calc(35 * 100% / 570);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $white;
@@ -241,11 +213,11 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
   @media (max-width: $mobile-width) {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 }
 
-.feedback__button-wrapper input[type="checkbox"] {
+.feedback__wrapper input[type="checkbox"] {
   position: absolute;
   width: 0;
   height: 0;
@@ -253,11 +225,11 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
   overflow: hidden;
 }
 
-.feedback input[type="checkbox"] + label {
+.feedback__wrapper input[type="checkbox"] + label {
   @include font(14, 16);
   position: relative;
   width: calc(264 * 100% / 570);
-  padding-left: 34px;
+  padding: 8px 14px 0 34px;
   color: rgba($white, 0.8);
   cursor: pointer;
 
@@ -267,7 +239,7 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
   }
 
   &::before {
-    top: 2px;
+    top: 8px;
     left: 2px;
     width: 16px;
     height: 16px;
@@ -276,7 +248,7 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
 
   &::after {
     display: none;
-    top: 4px;
+    top: 10px;
     left: 6px;
     width: 9px;
     height: 7px;
@@ -286,14 +258,17 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
   }
 
   @media (max-width: $tablet-width) {
-    padding-left: 39px;
+    padding-top: 9px;
+    padding-left: 37px;
 
     &::before {
-      left: 6px;
+      top: 9px;
+      left: 4px;
     }
 
     &::after {
-      left: 10px;
+      top: 11px;
+      left: 8px;
     }
   }
 
@@ -313,6 +288,6 @@ _::-moz-range-track, body:last-child .feedback__input-wrapper > input {
 }
 
 // &:checked
-.feedback__button-wrapper input[type="checkbox"]:checked + label::after {
+.feedback__wrapper input[type="checkbox"]:checked + label::after {
   display: block;
 }

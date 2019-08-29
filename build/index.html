@@ -196,30 +196,25 @@
       <!-- Обратная связь -->
       <section class="feedback text-content">
         <div class="site-wrapper">
-          <h2 class="visually-hidden">Форма обратной связи</h2>
 
           <div class="feedback__wrapper">
-            <p>Остались вопросы? Задайте их нам!</p>
+            <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
 
             <form action="#" method="POST">
 
-              <div class="feedback__input-wrapper">
-                <label class="visually-hidden" for="name">Введите ваше имя</label>
-                <input type="text" id="name" name="name" placeholder="Имя" required="">
-                <label class="visually-hidden" for="phone">Введите ваш телефон</label>
-                <input type="tel" id="phone" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
-              </div>
+              <label class="visually-hidden" for="name">Введите ваше имя</label>
+              <input type="text" id="name" name="name" placeholder="Имя" required="">
+              <label class="visually-hidden" for="phone">Введите ваш телефон</label>
+              <input type="tel" id="phone" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
 
               <label class="visually-hidden" for="message">Введите ваше сообщение</label>
               <textarea id="message" name="message" placeholder="Ваш вопрос" required=""></textarea>
 
-              <div class="feedback__button-wrapper">
-                <button type="submit">Задать вопрос</button>
+              <button type="submit">Задать вопрос</button>
 
-                <input type="checkbox" id="agree" name="agree">
-                <label for="agree">Я согласен на обработку персональных данных</label>
-              </div>
+              <input type="checkbox" id="agree" name="agree">
+              <label for="agree">Я согласен на обработку персональных данных</label>
 
             </form>
           </div>
@@ -381,7 +376,7 @@
           <label class="visually-hidden" for="popup-message">Введите ваше сообщение</label>
           <textarea id="popup-message" name="message" placeholder="Ваш вопрос" required=""></textarea>
 
-          <button class="popup__button-submit" type="submit">Отправить</button>
+          <button type="submit">Отправить</button>
 
           <input type="checkbox" id="popup-argee" name="agree">
           <label for="popup-argee">Я согласен на обработку персональных данных</label>
