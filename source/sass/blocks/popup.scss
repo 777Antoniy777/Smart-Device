@@ -70,8 +70,8 @@
   padding-bottom: 33px;
 }
 
-form > input,
-form > textarea {
+.popup__wrapper input,
+.popup__wrapper textarea {
   @include font($font-size-desk, $line-height-desk);
   padding: 0 16px 7px 24px;
   color: $white;
@@ -85,7 +85,7 @@ form > textarea {
   }
 }
 
-form > input {
+.popup__wrapper input {
   @include flex(row, center);
   width: 100%;
   height: 52px;
@@ -94,13 +94,13 @@ form > input {
 
 // for FF
 /* stylelint-disable */
-_::-moz-range-track, body:last-child form > input {
+_::-moz-range-track, body:last-child .popup__wrapper input {
   padding-top: 13px;
   padding-bottom: 16px;
 }
 /* stylelint-enable */
 
-form > textarea {
+.popup__wrapper textarea {
   width: 100%;
   height: 104px;
   margin-bottom: 24px;
@@ -108,7 +108,7 @@ form > textarea {
   resize: none;
 }
 
-.popup__button-submit {
+.popup__wrapper form button {
   @include font(14, 16, $bold);
   font-family: $roboto-condensed;
   width: 100%;
@@ -139,7 +139,7 @@ form > textarea {
   }
 }
 
-input[type="checkbox"] {
+.popup__wrapper input[type="checkbox"] {
   position: absolute;
   width: 0;
   height: 0;
@@ -147,7 +147,7 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
-input[type="checkbox"] + label {
+.popup__wrapper input[type="checkbox"] + label {
   @include font(14, 16);
   position: relative;
   display: block;
@@ -183,7 +183,7 @@ input[type="checkbox"] + label {
 }
 
 // &:checked
-input[type="checkbox"]:checked + label::after {
+.popup__wrapper input[type="checkbox"]:checked + label::after {
   display: block;
 }
 
