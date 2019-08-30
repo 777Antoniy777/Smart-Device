@@ -88,7 +88,8 @@
               <span>Получить бесплатную консультацию</span>
               <span>Бесплатная консультация</span>
             </a>
-            <span>Скролл вниз</span>
+            <!-- <span>Скролл вниз</span> -->
+            <button id="btn-scroll" type="button">Скролл вниз</button>
           </div>
 
           <picture>
@@ -163,38 +164,53 @@
           <ul class="services__list">
             <li class="services__item services__item--first">
               <a href="#">
+
                 <h3>Производство печатных плат</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/service-1@1x.webp 1x, img/service-1@2x.webp 2x">
+                  <source type="image/webp"
+                          srcset="img/lazy-img.png"
+                          data-srcset="img/service-1@1x.webp 1x, img/service-1@2x.webp 2x">
                   <!-- 1х: 1100px; 2x: 2200px -->
-                  <img src="img/service-1@1x.jpg"
-                       srcset="img/service-1@1x.jpg 1x, img/service-1@2x.jpg 2x"
-                       alt="2005 год">
+                  <img src="img/lazy-img.png"
+                       srcset="img/lazy-img.png"
+                       data-src="img/service-1@1x.jpg" data-srcset="img/service-1@2x.jpg 2x"
+                       alt="Платы">
                 </picture>
+
               </a>
             </li>
             <li class="services__item services__item--second">
               <a href="#">
+
                 <h3>Монтаж печатных плат</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/service-2@1x.webp 1x, img/service-2@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/lazy-img.png"
+                    data-srcset="img/service-2@1x.webp 1x, img/service-2@2x.webp 2x">
                   <!-- 1х: 1012px; 2x: 2024px -->
-                  <img src="img/service-2@1x.jpg"
-                       srcset="img/service-2@1x.jpg 1x, img/service-2@2x.jpg 2x"
-                       alt="2005 год">
+                  <img src="img/lazy-img.png"
+                       srcset="img/lazy-img.png"
+                       data-src="img/service-2@1x.jpg" data-srcset="img/service-2@2x.jpg 2x"
+                       alt="Платы">
                 </picture>
+
               </a>
             </li>
             <li class="services__item services__item--third">
               <a href="#">
+
                 <h3>Комплектующие для светотехники</h3>
                 <picture>
-                  <source type="image/webp" srcset="img/service-3@1x.webp 1x, img/service-3@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/lazy-img.png"
+                    data-srcset="img/service-3@1x.webp 1x, img/service-3@2x.webp 2x">
                   <!-- 1х: 620px; 2x: 1240px -->
-                  <img src="img/service-3@1x.jpg"
-                       srcset="img/service-3@1x.jpg 1x, img/service-3@2x.jpg 2x"
-                       alt="2005 год">
+                  <img src="img/lazy-img.png"
+                       srcset="img/lazy-img.png"
+                       data-src="img/service-3@1x.jpg" data-srcset="img/service-3@2x.jpg 2x"
+                       alt="Платы">
                 </picture>
+
               </a>
             </li>
           </ul>
@@ -286,7 +302,7 @@
                 <button class="accordion-close" type="button" aria-label="Открыть разделы сайта"></button>
               </div>
 
-              <nav class="section__nav">
+              <nav class="section__nav no-js">
 
                 <ul class="section__nav-list">
                   <li class="section__nav-item section__nav-item--company">
@@ -322,7 +338,7 @@
                 <button class="accordion-close" type="button" aria-label="Открыть раздел про наш офис"></button>
               </div>
 
-              <address class="adress__list">
+              <address class="adress__list no-js">
                 <span class="visually-hidden">Контактные телефоны</span>
 
                 <p class="adress__description adress__description--adress">г. Мытищи, Олимпийский проспект, д.10</p>
