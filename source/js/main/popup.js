@@ -17,7 +17,7 @@
   function openPopupHandler(evt) {
     evt.preventDefault();
 
-    body.style.overflowY = 'hidden';
+    body.style.overflow = 'hidden';
     popup.classList.remove('hidden');
   }
 
@@ -26,12 +26,12 @@
 
     if (evt.keyCode === 27 && !popup.classList.contains('hidden')) {
       popup.classList.add('hidden');
-      body.style.overflowY = 'unset';
+      body.style.overflow = 'unset';
     }
 
     if (target.closest('.popup__button-close') || target === popup) {
       popup.classList.add('hidden');
-      body.style.overflowY = 'unset';
+      body.style.overflow = 'unset';
     }
 
     return;

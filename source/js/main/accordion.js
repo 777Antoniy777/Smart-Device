@@ -10,11 +10,8 @@
   var mediaQueryList = window.matchMedia("(max-width: 767px)");
   function handleMediaChange(evt) {
     if (evt.matches) {
-      sectionList.classList.add('hidden');
-      adressList.classList.add('hidden');
-    } else {
-      sectionList.classList.remove('hidden');
-      adressList.classList.remove('hidden');
+      sectionList.classList.remove('no-js');
+      adressList.classList.remove('no-js');
     }
   }
   mediaQueryList.addListener(handleMediaChange);
@@ -48,9 +45,14 @@
   }
 
   function addClassToList(buttonElem, listElem) {
+
+    if (listElem.style.maxHeight) {
+      listElem.style.maxHeight = null;
+    } else {
+      listElem.style.maxHeight = listElem.scrollHeight + 'px';
+    }
+
     buttonElem.classList.toggle('accordion-close');
     buttonElem.classList.toggle('accordion-open');
-
-    listElem.classList.toggle('hidden');
   }
 })();

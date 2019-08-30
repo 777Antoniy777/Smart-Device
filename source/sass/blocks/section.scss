@@ -44,8 +44,9 @@
 
 .section__nav {
   @media (max-width: $mobile-width) {
-    margin-top: 3px;
-    margin-bottom: 27px;
+    max-height: 0;
+    transition: max-height 0.5s;
+    overflow: hidden;
   }
 }
 
@@ -102,9 +103,41 @@
       order: unset;
     }
   }
+
+  // for IE
+  /* stylelint-disable */
+  @media (max-width: $tablet-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    &--company,
+    &--products,
+    &--production,
+    &--installation,
+    &--accessories,
+    &--delivery,
+    &--contacts {
+      order: -1;
+    }
+  }
+  /* stylelint-enable */
+
+  @media (max-width: $mobile-width) {
+    &:first-child {
+      margin-top: 3px;
+    }
+
+    &:last-child {
+      margin-bottom: 27px;
+    }
+  }
 }
 
 .section__nav-item > a {
   @include font(15, 25);
+}
+
+// no-js
+.section .no-js {
+  @media (max-width: $mobile-width) {
+    max-height: unset;
+  }
 }
 

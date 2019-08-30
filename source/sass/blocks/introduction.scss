@@ -219,13 +219,25 @@
   }
 }
 
-.introduction__wrapper > span {
+.introduction__wrapper > button {
   @include font(14, 16);
   position: absolute;
   bottom: 22px;
   left: 39px;
   color: rgba($white, 0.5);
+  background-color: transparent;
+  border: none;
   transform: rotate(-90deg);
+
+  // &:hover
+  &:hover {
+    color: rgba($white, 1);
+  }
+
+  // &:active
+  &:active {
+    color: rgba($white, 0.7);
+  }
 
   @media (max-width: $tablet-width) {
     display: none;
