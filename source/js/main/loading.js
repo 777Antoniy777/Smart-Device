@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
         lazyImages.forEach(function (lazyImage) {
 
           if (lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0 && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.src = lazyImage.getAttribute('data-src');
+            lazyImage.srcset = lazyImage.getAttribute('data-srcset');
 
             var source = lazyImage.previousElementSibling;
 
             if (source) {
-              source.srcset = source.dataset.srcset;
+              source.srcset = source.getAttribute('data-srcset');
             }
 
             lazyImages = lazyImages.filter(function (image) {

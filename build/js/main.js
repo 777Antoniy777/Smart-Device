@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
         lazyImages.forEach(function (lazyImage) {
 
           if (lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0 && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.src = lazyImage.getAttribute('data-src');
+            lazyImage.srcset = lazyImage.getAttribute('data-srcset');
 
             var source = lazyImage.previousElementSibling;
 
             if (source) {
-              source.srcset = source.dataset.srcset;
+              source.srcset = source.getAttribute('data-srcset');
             }
 
             lazyImages = lazyImages.filter(function (image) {
@@ -133,12 +133,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (evt.keyCode === 27 && !popup.classList.contains('hidden')) {
       popup.classList.add('hidden');
-      body.style.overflow = 'unset';
+      body.style.overflow = 'auto';
     }
 
     if (target.closest('.popup__button-close') || target === popup) {
       popup.classList.add('hidden');
-      body.style.overflow = 'unset';
+      body.style.overflow = 'auto';
     }
 
     return;
