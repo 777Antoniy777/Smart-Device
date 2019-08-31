@@ -26,12 +26,12 @@
 
     if (evt.keyCode === 27 && !popup.classList.contains('hidden')) {
       popup.classList.add('hidden');
-      body.style.overflow = 'unset';
+      body.style.overflow = 'auto';
     }
 
     if (target.closest('.popup__button-close') || target === popup) {
       popup.classList.add('hidden');
-      body.style.overflow = 'unset';
+      body.style.overflow = 'auto';
     }
 
     return;
