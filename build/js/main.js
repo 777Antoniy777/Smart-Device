@@ -58,11 +58,6 @@
 })();
 
 /* eslint-disable */
-$("#phone").mask("+7(999)999-99-99");
-$("#popup-phone").mask("+7(999)999-99-99");
-
-
-/* eslint-disable */
 'use strict';
 document.addEventListener("DOMContentLoaded", function () {
   var lazyImages = [].slice.call(document.querySelectorAll('.services__list img'));
@@ -104,6 +99,17 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
 });
+
+'use strict';
+(function () {
+  var inputPhone = document.querySelector('#phone');
+  var popupInputPhone = document.querySelector('#popup-phone');
+  var maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+  var mask = IMask(inputPhone, maskOptions);
+  var mask = IMask(popupInputPhone, maskOptions);
+})();
 
 'use strict';
 (function () {
