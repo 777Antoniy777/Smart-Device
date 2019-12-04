@@ -20,6 +20,10 @@ var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 var del = require('del');
 
+var image = require("gulp-image");
+var resize = require("gulp-image-resize");
+var gm = require('gulp-gm');
+
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
     .pipe(plumber())
@@ -66,6 +70,34 @@ gulp.task('images', function () {
 
     .pipe(gulp.dest('source/img'));
 });
+
+gulp.task("tinyimages", function() {
+  return gulp.src('source/img/placeholders/*.{png,jpg}')
+    .pipe(image({
+      pngquant: ['--speed=11', '--force', 256, '--quality', 1, '--posterize', 1],
+      optipng: false,
+      zopflipng: false,
+      jpegRecompress: false,
+      mozjpeg: ['-quality', 5, '-smooth', 100],
+      guetzli: false,
+      gifsicle: false,
+      svgo: false,
+      concurrent: 10,
+      quiet: true
+    }))
+    .pipe(gulp.dest('source/img/placeholders'));
+});
+
+gulp.task("resizes", function() {
+  return gulp.src('source/img/*.{png,jpg}')
+    .pipe(resize({
+      percentage: 10,
+      cover: true,
+    }))
+    .pipe(gulp.dest('source/img/placeholders'));
+});
+
+gulp.task('min', gulp.series('resizes', 'tinyimages'));
 
 gulp.task('webp', function () {
   return gulp.src('source/img/**/*.{png,jpg}')

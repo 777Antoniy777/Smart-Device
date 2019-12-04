@@ -19,13 +19,14 @@
   width: 100%;
   padding-left: 241px;
   padding-bottom: 20px;
-  background-image: url("../img/year@1x.png");
+  // background-image: url("../img/year@1x.png");
+  background-image: url("../img/placeholders/year@1x.png");
   background-size: 220px 317px;
   background-position: 29px 6px;
   background-repeat: no-repeat;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/year@2x.png");
+    // background-image: url("../img/year@2x.png");
   }
 
   @media (max-width: $tablet-width) {

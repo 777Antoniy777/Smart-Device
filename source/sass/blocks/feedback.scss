@@ -22,13 +22,14 @@
   max-width: 1225px;
   width: 100%;
   padding-right: 27px;
-  background-image: url("../img/plane@1x.png");
+  // background-image: url("../img/plane@1x.png");
+  background-image: url("../img/placeholders/plane@1x.png");
   background-size: 42% auto;
   background-position: 0% 39%;
   background-repeat: no-repeat;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/plane@2x.png");
+    // background-image: url("../img/plane@2x.png");
   }
 
   @media (max-width: $tablet-width) {

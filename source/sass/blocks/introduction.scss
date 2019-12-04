@@ -7,9 +7,9 @@
   background-color: $introduction-bg;
   overflow: hidden;
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/background-chip@2x.png");
-  }
+  // @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  //   background-image: url("../img/background-chip@2x.png");
+  // }
 
   @media (max-width: $tablet-width) {
     min-height: 685px;
@@ -20,6 +20,23 @@
   @media (max-width: $mobile-width) {
     min-height: 530px;
     padding: 67px 0 38px;
+  }
+}
+
+// bg
+.webp .introduction {
+  background-image: url("../img/background-chip@1x.webp") !important;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/background-chip@2x.webp") !important;
+  }
+}
+
+.no-webp .introduction {
+  background-image: url("../img/background-chip@1x.png") !important;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/background-chip@2x.png") !important;
   }
 }
 

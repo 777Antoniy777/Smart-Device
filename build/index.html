@@ -15,6 +15,7 @@
       // Picture element HTML5 shiv
       document.createElement("picture");
     </script>
+
   </head>
   <body class="main-page">
 
@@ -77,7 +78,7 @@
     <main class="main">
 
       <!-- Вступление -->
-      <section class="introduction text-content">
+      <section class="introduction text-content b-lazy" data-src="../img/background-chip@1x.png|../img/background-chip@2x.png">
         <div class="site-wrapper">
 
           <div class="introduction__wrapper">
@@ -141,7 +142,7 @@
 
       <!-- О компании -->
       <section class="about text-content">
-        <div class="site-wrapper">
+        <div class="site-wrapper b-lazy" data-src="../img/year@1x.png|../img/year@2x.png">
 
           <div class="about__wrapper">
             <h2>О компании</h2>
@@ -163,11 +164,21 @@
               <a href="#">
 
                 <h3>Производство печатных плат</h3>
+
                 <picture>
-                  <source type="image/webp" srcset="img/lazy-img.png" data-srcset="img/service-1@1x.webp 1x, img/service-1@2x.webp 2x">
+                  <source type="image/webp" data-srcset="img/service-1@1x.webp 1x, img/service-1@2x.webp 2x">
                   <!-- 1х: 1100px; 2x: 2200px -->
-                  <img src="img/lazy-img.png" srcset="img/lazy-img.png" data-src="img/service-1@1x.jpg" data-srcset="img/service-1@2x.jpg 2x" alt="Платы">
+                  <img class="b-lazy" src="img/placeholders/service-1@1x.jpg" data-src="img/service-1@1x.jpg|img/service-1@2x.jpg" alt="Платы">
                 </picture>
+
+                <!-- <picture>
+                  <source type="image/webp"
+                          srcset="img/service-1@1x.webp 1x, img/service-1@2x.webp 2x"> -->
+                  <!-- 1х: 1100px; 2x: 2200px -->
+                  <!-- <img src="img/service-1@1x.jpg"
+                       srcset="img/service-1@2x.jpg 2x"
+                       alt="Платы">
+                </picture> -->
 
               </a>
             </li>
@@ -175,11 +186,21 @@
               <a href="#">
 
                 <h3>Монтаж печатных плат</h3>
+
                 <picture>
-                  <source type="image/webp" srcset="img/lazy-img.png" data-srcset="img/service-2@1x.webp 1x, img/service-2@2x.webp 2x">
-                  <!-- 1х: 1012px; 2x: 2024px -->
-                  <img src="img/lazy-img.png" srcset="img/lazy-img.png" data-src="img/service-2@1x.jpg" data-srcset="img/service-2@2x.jpg 2x" alt="Платы">
+                  <source type="image/webp" data-srcset="img/service-2@1x.webp 1x, img/service-2@2x.webp 2x">
+                  <!-- 1х: 1100px; 2x: 2200px -->
+                  <img class="b-lazy" src="img/placeholders/service-2@1x.jpg" data-src="img/service-2@1x.jpg|img/service-2@2x.jpg" alt="Платы">
                 </picture>
+
+                <!-- <picture>
+                  <source type="image/webp"
+                    srcset="img/service-2@1x.webp 1x, img/service-2@2x.webp 2x"> -->
+                    <!-- 1х: 1012px; 2x: 2024px -->
+                    <!-- <img src="img/service-2@1x.jpg"
+                        srcset="img/service-2@2x.jpg 2x"
+                        alt="Платы">
+                </picture> -->
 
               </a>
             </li>
@@ -187,11 +208,21 @@
               <a href="#">
 
                 <h3>Комплектующие для светотехники</h3>
+
                 <picture>
-                  <source type="image/webp" srcset="img/lazy-img.png" data-srcset="img/service-3@1x.webp 1x, img/service-3@2x.webp 2x">
-                  <!-- 1х: 620px; 2x: 1240px -->
-                  <img src="img/lazy-img.png" srcset="img/lazy-img.png" data-src="img/service-3@1x.jpg" data-srcset="img/service-3@2x.jpg 2x" alt="Платы">
+                  <source type="image/webp" data-srcset="img/service-3@1x.webp 1x, img/service-3@2x.webp 2x">
+                  <!-- 1х: 1100px; 2x: 2200px -->
+                  <img class="b-lazy" src="img/placeholders/service-3@1x.jpg" data-src="img/service-3@1x.jpg|img/service-3@2x.jpg" alt="Платы">
                 </picture>
+
+                <!-- <picture>
+                  <source type="image/webp"
+                    srcset="img/service-3@1x.webp 1x, img/service-3@2x.webp 2x"> -->
+                    <!-- 1х: 620px; 2x: 1240px -->
+                    <!-- <img src="img/service-3@1x.jpg"
+                        srcset="img/service-3@2x.jpg 2x"
+                        alt="Платы">
+                </picture> -->
 
               </a>
             </li>
@@ -202,7 +233,7 @@
 
       <!-- Обратная связь -->
       <section class="feedback text-content">
-        <div class="site-wrapper">
+        <div class="site-wrapper b-lazy" data-src="../img/plane@1x.png|../img/plane@2x.png">
 
           <div class="feedback__wrapper">
             <h2>Остались вопросы? Задайте их нам!</h2>
