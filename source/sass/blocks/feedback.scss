@@ -22,25 +22,40 @@
   max-width: 1225px;
   width: 100%;
   padding-right: 27px;
-  // background-image: url("../img/plane@1x.png");
-  background-image: url("../img/placeholders/plane@1x.png");
   background-size: 42% auto;
   background-position: 0% 39%;
   background-repeat: no-repeat;
-
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    // background-image: url("../img/plane@2x.png");
-  }
 
   @media (max-width: $tablet-width) {
     align-items: center;
     min-width: 590px;
     padding-right: 0;
-    background-image: none;
+  }
+}
+
+// webp
+.webp .feedback .site-wrapper {
+  background-image: url("../img/plane@1x.webp");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/plane@2x.webp");
   }
 
-  @media (max-width: $mobile-width) {
-    min-width: 290px;
+  @media (max-width: $tablet-width) {
+    background-image: none;
+  }
+}
+
+// no-webp
+.no-webp .feedback .site-wrapper {
+  background-image: url("../img/plane@1x.png");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/plane@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
   }
 }
 

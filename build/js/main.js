@@ -59,8 +59,45 @@
 
 'use strict';
 var bLazy = new Blazy({
-  selector: '.b-lazy',
+  selector: 'img[class~="b-lazy"]',
+
+  // error: function (elem, msg) {
+  //   if (msg === 'missing') {
+  //     console.log('one')
+  //   } else if (msg === 'invalid') {
+  //     console.log('two')
+  //     var retina = window.devicePixelRatio > 1 ? true : false;
+  //     var src = elem.dataset.src;
+  //     var splitSrc = src.split("|");
+
+  //     if (retina) {
+  //       elem.src = splitSrc[0];
+  //     } else {
+  //       elem.src = splitSrc[1];
+  //     }
+  //   }
+  // },
 });
+
+// var bgPngLazy = new Blazy({
+//   selector: '.feedback .site-wrapper',
+//   breakpoints: [{
+//     width: 1023, // max-width
+//     src: 'none'
+//   }],
+// });
+
+// var bgPngLazy = new Blazy({
+//   selector: '.no-webp .b-lazy',
+// });
+
+// var bgWebpLazy = new Blazy({
+//   selector: '.webp .b-lazy',
+//   breakpoints: [{
+//     width: 100, // max-width
+//     src: 'data-webp'
+//   }],
+// });
 
 
 /* eslint-disable */
@@ -178,12 +215,3 @@ var bLazy = new Blazy({
     });
   }
 })();
-
-/* eslint-disable */
-// Modernizr.on('webp', function(result) {
-//   if (result) {
-//     console.log('yes')
-//   } else {
-//     console.log('no')
-//   }
-// });
