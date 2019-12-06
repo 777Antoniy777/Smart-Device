@@ -34,7 +34,7 @@
   }
 }
 
-// webp
+// bg
 .webp .about .site-wrapper {
   background-image: url("../img/year@1x.webp");
 
@@ -47,8 +47,8 @@
   }
 }
 
-// no-webp
-.no-webp .about .site-wrapper {
+.no-webp .about .site-wrapper,
+.no-js .about .site-wrapper {
   background-image: url("../img/year@1x.png");
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {

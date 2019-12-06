@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Smart Device</title>
@@ -11,6 +11,9 @@
     <link href="fonts/PTMono-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
     <link href="fonts/RobotoCondensed-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
     <link href="fonts/RobotoCondensed-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
     <script async="">
       /*! modernizr 3.6.0 (Custom Build) | MIT *
       * https://modernizr.com/download/?-webp-setclasses !*/
@@ -93,7 +96,6 @@
               <span>Получить бесплатную консультацию</span>
               <span>Бесплатная консультация</span>
             </a>
-            <!-- <span>Скролл вниз</span> -->
             <button id="btn-scroll" type="button">Скролл вниз</button>
           </div>
 
@@ -174,16 +176,8 @@
                   <source type="image/webp" data-srcset="img/service-1@1x.webp 1x, img/service-1@2x.webp 2x">
                   <!-- 1х: 1100px; 2x: 2200px -->
                   <img class="b-lazy" src="img/placeholders/service-1@1x.jpg" data-src="img/service-1@1x.jpg|img/service-1@2x.jpg" alt="Платы">
+                  <noscript><img src="img/service-1@1x.jpg" alt="Платы"></noscript>
                 </picture>
-
-                <!-- <picture>
-                  <source type="image/webp"
-                          srcset="img/service-1@1x.webp 1x, img/service-1@2x.webp 2x"> -->
-                  <!-- 1х: 1100px; 2x: 2200px -->
-                  <!-- <img src="img/service-1@1x.jpg"
-                       srcset="img/service-1@2x.jpg 2x"
-                       alt="Платы">
-                </picture> -->
 
               </a>
             </li>
@@ -196,16 +190,8 @@
                   <source type="image/webp" data-srcset="img/service-2@1x.webp 1x, img/service-2@2x.webp 2x">
                   <!-- 1х: 1100px; 2x: 2200px -->
                   <img class="b-lazy" src="img/placeholders/service-2@1x.jpg" data-src="img/service-2@1x.jpg|img/service-2@2x.jpg" alt="Платы">
+                  <noscript><img src="img/service-2@1x.jpg" alt="Платы"></noscript>
                 </picture>
-
-                <!-- <picture>
-                  <source type="image/webp"
-                    srcset="img/service-2@1x.webp 1x, img/service-2@2x.webp 2x"> -->
-                    <!-- 1х: 1012px; 2x: 2024px -->
-                    <!-- <img src="img/service-2@1x.jpg"
-                        srcset="img/service-2@2x.jpg 2x"
-                        alt="Платы">
-                </picture> -->
 
               </a>
             </li>
@@ -220,15 +206,6 @@
                   <img class="b-lazy" src="img/placeholders/service-3@1x.jpg" data-src="img/service-3@1x.jpg|img/service-3@2x.jpg" alt="Платы">
                   <noscript><img src="img/service-3@1x.jpg" alt="Платы"></noscript>
                 </picture>
-
-                <!-- <picture>
-                  <source type="image/webp"
-                    srcset="img/service-3@1x.webp 1x, img/service-3@2x.webp 2x"> -->
-                    <!-- 1х: 620px; 2x: 1240px -->
-                    <!-- <img src="img/service-3@1x.jpg"
-                        srcset="img/service-3@2x.jpg 2x"
-                        alt="Платы">
-                </picture> -->
 
               </a>
             </li>

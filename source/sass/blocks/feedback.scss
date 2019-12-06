@@ -33,7 +33,7 @@
   }
 }
 
-// webp
+// bg
 .webp .feedback .site-wrapper {
   background-image: url("../img/plane@1x.webp");
 
@@ -46,8 +46,8 @@
   }
 }
 
-// no-webp
-.no-webp .feedback .site-wrapper {
+.no-webp .feedback .site-wrapper,
+.no-js .feedback .site-wrapper {
   background-image: url("../img/plane@1x.png");
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {

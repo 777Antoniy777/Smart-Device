@@ -27,7 +27,8 @@
   }
 }
 
-.no-webp .introduction {
+.no-webp .introduction,
+.no-js .introduction {
   background-image: url("../img/background-chip@1x.png");
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
